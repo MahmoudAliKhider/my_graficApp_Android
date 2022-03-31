@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:backgroundTint="#EAE6C1"
+    android:foregroundTint="#C8BDBD"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="137dp"
+        android:layout_height="138dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:transitionName="logo_image" />
+
+    <TextView
+        android:id="@+id/logoName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/arbutus"
+        android:text="Hello there,Welcom back"
+
+        android:textColor="#000"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/sloginName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:text="Signe In To Continue"
+        android:textSize="17dp"
+        android:transitionName="logo_desc"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Username"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:transitionName="text_tran"
+            android:hint="UserName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:hint="Password"
+            android:transitionName="password_tran"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="#0000"
+            android:elevation="0dp"
+
+            android:text="Forget Password"
+            android:textColor="#000" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000"
+            android:id="@+id/login_btn"
+            android:backgroundTint="#0B0A0A"
+            android:foregroundTint="#332F2F"
+            android:text="Go"
+            android:onClick="loginUser"
+            android:textColor="#fff"
+            android:transitionName="button_tran"
+            android:textColorHighlight="#131313"
+            android:textColorHint="#121111" />
+
+        <Button
+            android:id="@+id/signup_screen"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="#0000"
+            android:elevation="0dp"
+            android:transitionName="login_signup_tran"
+            android:text="New Usear? Sign Up"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+</LinearLayout>
